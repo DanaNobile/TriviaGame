@@ -1,0 +1,15 @@
+.container{
+    width: 960px;
+}
+
+.falseBtn{
+    color: rgb(86, 16, 92);
+}
+
+.trueBtn{
+color: teal;
+}
+
+.startBtn{
+    color: pink;
+}

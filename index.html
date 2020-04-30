@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- reset -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- boostrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <title>Yoga Trivia</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="border:1px solid pink">
+                <h1>Yoga Trivia</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="border:1px solid pink">
+                <button type="button" class="btn btn-secondary btn-lg btn-block startBtn">Start</button>
+            </div>
+        </div>
+
+        <div class="game">
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h2 id="timer">
+                        </h1>
+                </div>
+            </div>
+            <!-- Question 1  -->
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h3 id="question">The word "yoga" is derived from a Sanskrit word that means "union"</h3>
+                </div>
+                <!-- Buttons  -->
+                <div class="col-md-12" style="border:1px solid pink">
+                    <!-- True Button-->
+                    <div class="custom-control custom-radio custom-control-inline trueBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline1"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">True</label>
+                    </div>
+                    <!-- False Button-->
+                    <div class="custom-control custom-radio custom-control-inline falseBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline2"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2  -->
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h3 id="question">Yoga originates from Thailand</h3>
+                </div>
+                <!-- Buttons  -->
+                <div class="col-md-12" style="border:1px solid pink">
+                    <!-- True Button-->
+                    <div class="custom-control custom-radio custom-control-inline trueBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline1"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">True</label>
+                    </div>
+                    <!-- False Button-->
+                    <div class="custom-control custom-radio custom-control-inline falseBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline2"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3  -->
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h3 id="question">There are 26 postures in the Bikram Yoga series</h3>
+                </div>
+                <!-- Buttons  -->
+                <div class="col-md-12" style="border:1px solid pink">
+                    <!-- True Button-->
+                    <div class="custom-control custom-radio custom-control-inline trueBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline1"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">True</label>
+                    </div>
+                    <!-- False Button-->
+                    <div class="custom-control custom-radio custom-control-inline falseBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline2"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">False</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 4  -->
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h3 id="question">The 5th chakra signifies the process of enlightenment</h3>
+                </div>
+                <!-- Buttons  -->
+                <div class="col-md-12" style="border:1px solid pink">
+                    <!-- True Button-->
+                    <div class="custom-control custom-radio custom-control-inline trueBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline1"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">True</label>
+                    </div>
+                    <!-- False Button-->
+                    <div class="custom-control custom-radio custom-control-inline falseBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline2"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">False</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Question 5  -->
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h3 id="question">The Yamas represent moral and ethical rules</h3>
+                </div>
+                <!-- Buttons  -->
+                <div class="col-md-12" style="border:1px solid pink">
+                    <!-- True Button-->
+                    <div class="custom-control custom-radio custom-control-inline trueBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline1"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">True</label>
+                    </div>
+                    <!-- False Button-->
+                    <div class="custom-control custom-radio custom-control-inline falseBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline2"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6  -->
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h3 id="question">Pranayama refers to how far the spine will bend</h3>
+                </div>
+                <!-- Buttons  -->
+                <div class="col-md-12" style="border:1px solid pink">
+                    <!-- True Button-->
+                    <div class="custom-control custom-radio custom-control-inline trueBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline1"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">True</label>
+                    </div>
+                    <!-- False Button-->
+                    <div class="custom-control custom-radio custom-control-inline falseBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline2"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6  -->
+            <div class="row">
+                <div class="col-md-12" style="border:1px solid pink">
+                    <h3 id="question">There are eight limbs in the practice of Ashtanga yoga</h3>
+                </div>
+                <!-- Buttons  -->
+                <div class="col-md-12" style="border:1px solid pink">
+                    <!-- True Button-->
+                    <div class="custom-control custom-radio custom-control-inline trueBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline1"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">True</label>
+                    </div>
+                    <!-- False Button-->
+                    <div class="custom-control custom-radio custom-control-inline falseBtn">
+                        <input type="radio" class="custom-control-input" id="defaultInline2"
+                            name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">False</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <!-- close game container  -->
+    </div>
+
+
+    <!-- close bootstrap container  -->
+    </div>
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
