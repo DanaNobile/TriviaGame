@@ -1,19 +1,29 @@
-//  Interval Demonstration
-//  Set our number counter to 100.
-var number = 100;
 
+// This function hides the game and score upon page load
+
+$(function () {
+    $('.game').hide();
+    $('.scoreInfo').hide();
+});
+
+// This button shows the game once the start button is clicked and hides the start button
+$('.startBtn').click(function () {
+    $('.game').show();
+    $('.startBtn').hide();
+
+});
+
+
+
+
+//  This is the timer function: Set to 100 seconds.
+var number = 100;
 //  Variable that will hold our interval ID when we execute
 //  the "run" function
 var intervalId;
 
-//  When the stop button gets clicked, run the stop function.
+$(".startBtn").on("click", run);
 
-//  When the resume button gets clicked, execute the run function.
-$("#startBtn").on("click", run);
-
-//  The run function sets an interval
-//  that runs the decrement function once a second.
-//  *****BUG FIX******** 
 //  Clearing the intervalId prior to setting our new intervalId will not allow multiple instances.
 function run() {
     clearInterval(intervalId);
@@ -28,7 +38,6 @@ function decrement() {
     //  Show the number in the #show-number tag.
     $("#timer").html("Time remaining:  " + number);
 
-
     //  Once number hits zero...
     if (number === 0) {
 
@@ -40,4 +49,17 @@ function decrement() {
     }
 }
 
+function stop() {
+
+    //  Clears our intervalId
+    //  We just pass the name of the interval
+    //  to the clearInterval function.
+    clearInterval(intervalId);
+}
+
 run();
+
+
+var correctAns = 0;
+var incorrectAns = 0;
+var unAns = 0;
