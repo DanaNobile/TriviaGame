@@ -63,3 +63,8 @@ run();
 var correctAns = 0;
 var incorrectAns = 0;
 var unAns = 0;
+
+// jQuery(function ($) {
+//     $("input:radio[name=q1Tbtn]").click()
+//     console.log("clicked");
+// })
