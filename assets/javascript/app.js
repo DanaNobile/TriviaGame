@@ -72,9 +72,7 @@ $('#true1').one("click", function () {
 
     if (radioValue === 'trueA') {
         correctAns++
-        console.log("true");
         $('.correct').html("Correct:  " + correctAns)
-
     }
 
 });
@@ -84,7 +82,6 @@ $('#false1').one("click", function () {
 
     if (radioValue === 'falseA') {
         incorrectAns++
-        console.log("true");
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 });
@@ -95,7 +92,6 @@ $('#true2').one("click", function () {
 
     if (radioValue === 'true') {
         incorrectAns++
-        console.log("true");
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 
@@ -106,7 +102,6 @@ $('#false2').one("click", function () {
 
     if (radioValue === 'false') {
         correctAns++
-        console.log("true");
         $('.correct').html("Correct:  " + correctAns)
     }
 });
@@ -118,7 +113,6 @@ $('#true3').one("click", function () {
 
     if (radioValue === 'true') {
         correctAns++
-        console.log("true");
         $('.correct').html("Correct:  " + correctAns)
     }
 
@@ -129,7 +123,6 @@ $('#false3').one("click", function () {
 
     if (radioValue === 'false') {
         incorrectAns++
-        console.log("true");
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 });
@@ -141,7 +134,6 @@ $('#true4').one("click", function () {
 
     if (radioValue === 'true') {
         incorrectAns++
-        console.log("true");
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 
@@ -152,7 +144,6 @@ $('#false4').one("click", function () {
 
     if (radioValue === 'false') {
         correctAns++
-        console.log("true");
         $('.correct').html("Correct:  " + correctAns)
     }
 });
@@ -164,7 +155,6 @@ $('#true5').one("click", function () {
 
     if (radioValue === 'true') {
         correctAns++
-        console.log("true");
         $('.correct').html("Correct:  " + correctAns)
     }
 
@@ -175,7 +165,6 @@ $('#false5').one("click", function () {
 
     if (radioValue === 'false') {
         incorrectAns++
-        console.log("true");
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 });
@@ -186,7 +175,6 @@ $('#true6').one("click", function () {
 
     if (radioValue === 'true') {
         incorrectAns++
-        console.log("true");
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 
@@ -197,7 +185,6 @@ $('#false6').one("click", function () {
 
     if (radioValue === 'false') {
         correctAns++
-        console.log("true");
         $('.correct').html("Correct:  " + correctAns)
     }
 });
@@ -208,7 +195,6 @@ $('#true7').one("click", function () {
 
     if (radioValue === 'true') {
         correctAns++
-        console.log("true");
         $('.correct').html("Correct:  " + correctAns)
     }
 
@@ -219,72 +205,9 @@ $('#false7').one("click", function () {
 
     if (radioValue === 'false') {
         incorrectAns++
-        console.log("true");
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 });
-
-
-// });
-
-
-// thisk ind of worked but not right
-
-// $(document).ready(function () {
-//     $('#true1').click(function () {
-//         radioValue = $("input[name='choice1']:checked").val();
-
-//         if (radioValue === 'trueA') {
-//             correctAns++
-//             console.log("true");
-//             $('.correct').html("Correct:  " + correctAns)
-//         }
-
-//     });
-
-//     $('#false1').click(function () {
-//         radioValue = $("input[name='choice1']:checked").val();
-
-//         if (radioValue === 'falseA')
-//             incorrectAns++
-//         console.log("false");
-//         $('.incorrect').html("Incorrect:  " + incorrectAns)
-//     });
-// });
-
-
-
-//also not right 
-// $(document).ready(function () {
-//     $('#q1').one("click", function () {
-//         radioValue = $("input[name='choice1']:checked").val();
-
-//         if (radioValue === 'trueA') {
-//             correctAns++
-//             console.log("true");
-//             $('.correct').html("Correct:  " + correctAns)
-//         }
-//         if (radioValue === 'falseA') {
-//             incorrectAns++
-//             console.log("true");
-//             $('.incorrect').html("Incorrect:  " + incorrectAns)
-//         }
-
-//     });
-
-    // $('#false1').one("click", function () {
-    //     radioValue = $("input[name='choice1']:checked").val();
-
-    //     if (radioValue === 'falseA') {
-    //         incorrectAns++
-    //         console.log("true");
-    //         $('.incorrect').html("Incorrect:  " + incorrectAns)
-    //     }
-    // });
-
-
-// });
-
 
 
 
