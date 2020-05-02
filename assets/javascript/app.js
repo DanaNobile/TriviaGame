@@ -12,9 +12,14 @@ $('.startBtn').click(function () {
     $('.startBtn').hide();
 });
 
+// This function brings you to the score when done with the test and hides the game
+$('.doneBtn').click(function () {
+    $('.game').hide();
+    $('.scoreInfo').show();
+});
 
 //  This is the timer function: Set to 100 seconds.
-var number = 100;
+var number = 50;
 var intervalId;
 // This starts the timer upon click of Start button
 $(".startBtn").on("click", run);
@@ -52,12 +57,6 @@ function stop() {
 
 run();
 
-
-//user clicks true or false
-// value is stored
-// if value === correct then correctAns ++
-// if value === incorrect then incorrectAns ++
-
 // This starts the scoring of answers
 
 // These are global variables 
@@ -69,7 +68,6 @@ var unAns = 0;
 // Question 1 Logic (answer true)
 $('#true1').one("click", function () {
     radioValue = $("input[name='choice1']:checked").val();
-
     if (radioValue === 'trueA') {
         correctAns++
         $('.correct').html("Correct:  " + correctAns)
@@ -79,7 +77,6 @@ $('#true1').one("click", function () {
 
 $('#false1').one("click", function () {
     radioValue = $("input[name='choice1']:checked").val();
-
     if (radioValue === 'falseA') {
         incorrectAns++
         $('.incorrect').html("Incorrect:  " + incorrectAns)
@@ -89,8 +86,7 @@ $('#false1').one("click", function () {
 // Question 2 Logic (answer false)
 $('#true2').one("click", function () {
     radioValue = $("input[name='choice2']:checked").val();
-
-    if (radioValue === 'true') {
+    if (radioValue === 'trueB') {
         incorrectAns++
         $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
@@ -99,8 +95,7 @@ $('#true2').one("click", function () {
 
 $('#false2').one("click", function () {
     radioValue = $("input[name='choice2']:checked").val();
-
-    if (radioValue === 'false') {
+    if (radioValue === 'falseB') {
         correctAns++
         $('.correct').html("Correct:  " + correctAns)
     }
@@ -110,7 +105,6 @@ $('#false2').one("click", function () {
 // Question 3 Logic (answer true)
 $('#true3').one("click", function () {
     radioValue = $("input[name='choice3']:checked").val();
-
     if (radioValue === 'true') {
         correctAns++
         $('.correct').html("Correct:  " + correctAns)
@@ -212,15 +206,3 @@ $('#false7').one("click", function () {
 
 
 
-// function newGame(){
-
-// 	$('.correct').empty();
-// 	$('.incorrect').empty();
-// 	$('#unanswered').empty();
-
-// 	currentQuestion = 0;
-// 	correctAnswer = 0;
-// 	incorrectAnswer = 0;
-// 	unanswered = 0;
-
-// }

@@ -1,7 +1,22 @@
+button{
+    margin-top: 100px;
+}
+body, html {
+    height: 100%;
+} 
+
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     color: rgb(77, 76, 76);  
+ }
+ 
+ h4{
+     font-size: 36px;
+ }
+
 .container{
     width: 960px;
 }
-
 
 .start{
     width: 960px;
@@ -21,13 +36,17 @@
    text-align: center;
 }
 
-button{
-    margin-top: 100px;
-
+.doneBtn{
+    color:white;
+    background-color:rgb(145, 185, 145);
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   border-color: white;
+   text-align: center;
 }
-body, html {
-    height: 100%;
-} 
+
 
 /* The hero image- Resource: W3 Schools */
 .hero-image {
@@ -57,27 +76,12 @@ body, html {
 }
 
 
-#timer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400px;
-    color: white;
-    background-color: rgb(145, 185, 145);
-    height: 60px;
-   text-align: center;
-
-}
-
 .game{
-/* margin-top: 15px; */
-/* background-image: linear-gradient(rgba(255, 255, 255, 0.694), rgba(255, 255, 255, 0.482)), url("../images/Questions\ Background.jpg"); */
 padding-bottom: 150px;
-
-
 }
 
 .buttons{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* color: rgb(77, 76, 76); */
    background-color:  rgb(145, 185, 145);
    color: white;
    padding-left: 50px;
@@ -95,25 +99,17 @@ padding-bottom: 150px;
     float: none;
     margin-right: auto;
     margin-left: auto;
-text-align: center;
-line-height: 40px;
-background-image: linear-gradient(rgba(255, 255, 255, 0.694), rgba(255, 255, 255, 0.482)), url("../images/Questions\ Background.jpg");
-border: solid 10px;
-border-color: rgb(145, 185, 145);
-margin-top: 50px;
-padding-top: 50px;
-padding-bottom: 50px;
-}
+    text-align: center;
+    line-height: 40px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.694), rgba(255, 255, 255, 0.482)), url("../images/Questions\ Background.jpg");
+    border: solid 10px;
+    border-color: rgb(145, 185, 145);
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    }
 
-h3{
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(77, 76, 76);
-  
-}
 
-h4{
-    font-size: 36px;
-}
 
 .scoreInfo{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -127,3 +123,13 @@ h4{
     line-height: 35px;
 }
 
+
+#timer{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400px;
+    color: white;
+    background-color: rgb(145, 185, 145);
+    height: 60px;
+    text-align: center;
+
+}
