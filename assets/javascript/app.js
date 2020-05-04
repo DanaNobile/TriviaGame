@@ -114,7 +114,7 @@ $(document).ready(function () {
             var bottomText = "Not too bad, yogi!"
         }
         else {
-            var endMessage = "Keep 'practicing..";
+            var endMessage = "Keep practicing..";
             var bottomText = "Yoga is a practice, take time to learn!"
         }
 
