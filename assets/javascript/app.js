@@ -24,17 +24,17 @@ $(document).ready(function () {
         question: "The word 'yoga' is derived from a Sanskrit word that means 'union'.",
         answers: ["True", "False"],
         correctAnswer: "True",
-        image: "<img src='/YogaTriviaGame/assets/images/union.jpg>"
+        image: "<img src='../images/1union.jpg>"
     }, {
         question: "Yoga originates from Thailand.",
         answers: ["True", "False"],
         correctAnswer: "False",
-        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+        image: "<img src='../images/2india.jpg>"
     }, {
         question: "There are 26 postures in the Bikram Yoga series.",
         answers: ["True", "False"],
         correctAnswer: "True",
-        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+        image: "<img src='../images/3bikram.jpeg'>"
     }, {
         question: "The 5th chakra signifies the process of enlightenment.",
         answers: ["True", "False"],
