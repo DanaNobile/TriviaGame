@@ -1,208 +1,199 @@
 
-// This function hides the game and score upon page load
-
-$(function () {
-    $('.game').hide();
-    $('.scoreInfo').hide();
-});
-
-// This button shows the game once the start button is clicked and hides the start button
-$('.startBtn').click(function () {
-    $('.game').show();
-    $('.startBtn').hide();
-});
-
-// This function brings you to the score when done with the test and hides the game
-$('.doneBtn').click(function () {
-    $('.game').hide();
-    $('.scoreInfo').show();
-});
-
-//  This is the timer function: Set to 100 seconds.
-var number = 50;
-var intervalId;
-// This starts the timer upon click of Start button
-$(".startBtn").on("click", run);
-
-//  Clearing the intervalId prior to setting our new intervalId will not allow multiple instances.
-function run() {
-    clearInterval(intervalId);
-    intervalId = setInterval(decrement, 1000);
-}
-//  The decrement function
-function decrement() {
-    //  Decrease number by one
-    number--;
-    //  Show the number in the #show-number tag
-    $("#timer").html("Time remaining:  " + number);
-
-    //  Once number hits zero...
-    if (number === 0) {
-        //  ...run the stop function.
-        stop();
-        //  Show score and hide game when time is up
-        $('.scoreInfo').show();
-        $('.game').hide();
-
-    }
-}
-
-function stop() {
-
-    //  Clears our intervalId
-    //  We just pass the name of the interval
-    //  to the clearInterval function.
-    clearInterval(intervalId);
-}
-
-run();
-
-// This starts the scoring of answers
-
-// These are global variables 
-var correctAns = 0;
-var incorrectAns = 0;
-var unAns = 0;
 
 
-// Question 1 Logic (answer true)
-$('#true1').one("click", function () {
-    radioValue = $("input[name='choice1']:checked").val();
-    if (radioValue === 'trueA') {
-        correctAns++
-        $('.correct').html("Correct:  " + correctAns)
+
+
+$(document).ready(function () {
+
+    // GLOBAL VARIABLES
+
+    // Track what question we're on
+    var counter = 0;
+
+    // Timer Start Number
+    var countStartNumber = 15;
+
+    // Count correct guesses
+    var correctAns = 0;
+
+    // Count incorrect 
+    var incorrectAns = 0;
+
+    // This is an array of GAME QUESTIONS
+    var questions = [{
+        question: "The word 'yoga' is derived from a Sanskrit word that means 'union'.",
+        answers: ["True", "False"],
+        correctAnswer: "True",
+        image: "<img src='/YogaTriviaGame/assets/images/union.jpg>"
+    }, {
+        question: "Yoga originates from Thailand.",
+        answers: ["True", "False"],
+        correctAnswer: "False",
+        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+    }, {
+        question: "There are 26 postures in the Bikram Yoga series.",
+        answers: ["True", "False"],
+        correctAnswer: "True",
+        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+    }, {
+        question: "The 5th chakra signifies the process of enlightenment.",
+        answers: ["True", "False"],
+        correctAnswer: "False",
+        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+    }, {
+        question: "The Yamas represent moral and ethical rules.",
+        answers: ["True", "False"],
+        correctAnswer: "True",
+        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+    }, {
+        question: "Pranayama refers to how far the spine will bend.",
+        answers: ["True", "False"],
+        correctAnswer: "False",
+        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+    }, {
+        question: "There are eight limbs in the practice of Ashtanga yoga.",
+        answers: ["True", "False"],
+        correctAnswer: "True",
+        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+    }]
+
+    function questionContent() {
+        $(".game").append("<p><strong>" +
+            questions[counter].question +
+            "</p><p class='answers'>" +
+            questions[counter].answers[0] +
+            "</p><p class='answers'>" +
+            questions[counter].answers[1] +
+            "</strong></p>");
     }
 
-});
-
-$('#false1').one("click", function () {
-    radioValue = $("input[name='choice1']:checked").val();
-    if (radioValue === 'falseA') {
-        incorrectAns++
-        $('.incorrect').html("Incorrect:  " + incorrectAns)
-    }
-});
-
-// Question 2 Logic (answer false)
-$('#true2').one("click", function () {
-    radioValue = $("input[name='choice2']:checked").val();
-    if (radioValue === 'trueB') {
-        incorrectAns++
-        $('.incorrect').html("Incorrect:  " + incorrectAns)
+    // If the user guesses correctly
+    function answeredCorrectly() {
+        $(".game").html("<p class='correct'>Correct!!</p>");
+        correctAns++;
+        var correctAnswer = questions[counter].correctAnswer;
+        $(".game").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
+            questions[counter].image);
+        setTimeout(nextQuestion, 3000);
+        counter++;
     }
 
-});
-
-$('#false2').one("click", function () {
-    radioValue = $("input[name='choice2']:checked").val();
-    if (radioValue === 'falseB') {
-        correctAns++
-        $('.correct').html("Correct:  " + correctAns)
-    }
-});
-
-
-// Question 3 Logic (answer true)
-$('#true3').one("click", function () {
-    radioValue = $("input[name='choice3']:checked").val();
-    if (radioValue === 'true') {
-        correctAns++
-        $('.correct').html("Correct:  " + correctAns)
+    // If the user guesses incorrectly
+    function answeredIncorrectly() {
+        $(".game").html("<p class='incorrect'>Incorrect.</p>");
+        incorrectAns++;
+        var correctAnswer = questions[counter].correctAnswer;
+        $(".game").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
+            questions[counter].image);
+        setTimeout(nextQuestion, 3000);
+        counter++;
     }
 
-});
-
-$('#false3').one("click", function () {
-    radioValue = $("input[name='choice3']:checked").val();
-
-    if (radioValue === 'false') {
-        incorrectAns++
-        $('.incorrect').html("Incorrect:  " + incorrectAns)
-    }
-});
-
-
-// Question 4 Logic (answer is false)
-$('#true4').one("click", function () {
-    radioValue = $("input[name='choice4']:checked").val();
-
-    if (radioValue === 'true') {
-        incorrectAns++
-        $('.incorrect').html("Incorrect:  " + incorrectAns)
+    // If the timer runs out...
+    function timeUp() {
+        if (time === 0) {
+            $(".game").html("<p class='timeUp'>Time's Up!</p>");
+            incorrectAns++;
+            var correctAnswer = questions[counter].correctAnswer;
+            $(".game").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
+                questions[counter].image);
+            setTimeout(nextQuestion, 3000);
+            counter++;
+        }
     }
 
-});
 
-$('#false4').one("click", function () {
-    radioValue = $("input[name='choice4']:checked").val();
+    // RESULTS SCREEN
+    function results() {
+        if (correctAns === questions.length) {
+            var endMessage = "You scored 100%!";
+            var bottomText = "Great job!"
+        }
+        else if (correctAns > incorrectAns) {
+            var endMessage = "Good job!";
+            var bottomText = "Not too bad, yogi!"
+        }
+        else {
+            var endMessage = "Keep 'practicing..";
+            var bottomText = "Yoga is a practice, take time to learn!"
+        }
 
-    if (radioValue === 'false') {
-        correctAns++
-        $('.correct').html("Correct:  " + correctAns)
-    }
-});
+        $(".game").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" +
+            correctAns + "</strong> right.</p>" + "<p>You got <strong>" +
+            incorrectAns + "</strong> wrong.</p>");
 
+        $(".game").append("<h1 class='startBtn'>Start Over?</h1>");
 
-// Question 5 Logic (answer true)
-$('#true5').one("click", function () {
-    radioValue = $("input[name='choice5']:checked").val();
+        $("#bottomText").html(bottomText);
+        gameReset();
+        $(".startBtn").click(nextQuestion);
 
-    if (radioValue === 'true') {
-        correctAns++
-        $('.correct').html("Correct:  " + correctAns)
-    }
-
-});
-
-$('#false5').one("click", function () {
-    radioValue = $("input[name='choice5']:checked").val();
-
-    if (radioValue === 'false') {
-        incorrectAns++
-        $('.incorrect').html("Incorrect:  " + incorrectAns)
-    }
-});
-
-// Question 6 Logic (answer is false)
-$('#true6').one("click", function () {
-    radioValue = $("input[name='choice6']:checked").val();
-
-    if (radioValue === 'true') {
-        incorrectAns++
-        $('.incorrect').html("Incorrect:  " + incorrectAns)
     }
 
-});
 
-$('#false6').one("click", function () {
-    radioValue = $("input[name='choice6']:checked").val();
 
-    if (radioValue === 'false') {
-        correctAns++
-        $('.correct').html("Correct:  " + correctAns)
-    }
-});
-
-// Question 7 Logic (answer is true)
-$('#true7').one("click", function () {
-    radioValue = $("input[name='choice7']:checked").val();
-
-    if (radioValue === 'true') {
-        correctAns++
-        $('.correct').html("Correct:  " + correctAns)
+    // Sets game timer to 15 seconds
+    function timer() {
+        clock = setInterval(countDown, 1000);
+        function countDown() {
+            if (time < 1) {
+                clearInterval(clock);
+                timeUp();
+            }
+            if (time > 0) {
+                time--;
+            }
+            $("#timer").html("<strong>" + time + "</strong>");
+        }
     }
 
-});
 
-$('#false7').one("click", function () {
-    radioValue = $("input[name='choice7']:checked").val();
 
-    if (radioValue === 'false') {
-        incorrectAns++
-        $('.incorrect').html("Incorrect:  " + incorrectAns)
+    function nextQuestion() {
+        if (counter < questions.length) {
+            time = 15;
+            $(".game").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
+            questionContent();
+            timer();
+            timeUp();
+        }
+        else {
+            results();
+        }
     }
+
+    // Reset score upon game restart
+
+    function gameReset() {
+        counter = 0;
+        correctAns = 0;
+        incorrectAns = 0;
+        // Timer Start Number
+        // var countStartNumber = 15;
+    }
+
+
+    function startGame() {
+        $(".game").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
+        $(".startBtn").hide();
+        questionContent();
+        timer();
+        timeUp();
+    }
+
+    $(".startBtn").click(nextQuestion);
+
+
+
+    $(".game").on("click", ".answers", (function () {
+        var userGuess = $(this).text();
+        if (userGuess === questions[counter].correctAnswer) {
+            clearInterval(clock);
+            answeredCorrectly();
+        }
+        else {
+            clearInterval(clock);
+            answeredIncorrectly();
+        }
+    }))
 });
-
-
-
-

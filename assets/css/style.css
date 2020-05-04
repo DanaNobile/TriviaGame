@@ -151,3 +151,20 @@ padding-bottom: 150px;
      }
  }
 
+
+ #timer {
+    font-weight: bold;
+}
+
+.answers:hover {
+    background-color: rgb(145, 185, 145);
+    
+}
+
+.answers {
+    text-align: center;
+    border: solid 2px black;
+    border-radius: 5px;
+    margin: 15px 25%;
+    
+}
