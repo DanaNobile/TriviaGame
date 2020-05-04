@@ -24,37 +24,37 @@ $(document).ready(function () {
         question: "The word 'yoga' is derived from a Sanskrit word that means 'union'.",
         answers: ["True", "False"],
         correctAnswer: "True",
-        image: "<img src='../images/1union.jpg>"
+        image: "<img src='assets/images/1union.jpg' class='image'>"
     }, {
         question: "Yoga originates from Thailand.",
         answers: ["True", "False"],
         correctAnswer: "False",
-        image: "<img src='../images/2india.jpg>"
+        image: "<img src='assets/images/2india.jpg' class= 'image'>"
     }, {
         question: "There are 26 postures in the Bikram Yoga series.",
         answers: ["True", "False"],
         correctAnswer: "True",
-        image: "<img src='../images/3bikram.jpeg'>"
+        image: "<img src='assets/images/3bikram.jpg' class='image'>"
     }, {
         question: "The 5th chakra signifies the process of enlightenment.",
         answers: ["True", "False"],
         correctAnswer: "False",
-        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+        image: "<img src='assets/images/4chakra.jpg' class='image'>"
     }, {
         question: "The Yamas represent moral and ethical rules.",
         answers: ["True", "False"],
         correctAnswer: "True",
-        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+        image: "<img src='assets/images/5yamas.jpg' class='image'>"
     }, {
         question: "Pranayama refers to how far the spine will bend.",
         answers: ["True", "False"],
         correctAnswer: "False",
-        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+        image: "<img src='assets/images/6breathing.jpg' class='image'>"
     }, {
         question: "There are eight limbs in the practice of Ashtanga yoga.",
         answers: ["True", "False"],
         correctAnswer: "True",
-        image: "<img src='assets/images/q2.gif' class='img-circle'>"
+        image: "<img src='assets/images/7ashtanga.jpg' class='image'>"
     }]
 
     function questionContent() {
