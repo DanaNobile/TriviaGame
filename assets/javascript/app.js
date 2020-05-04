@@ -107,15 +107,15 @@ $(document).ready(function () {
     function results() {
         if (correctAns === questions.length) {
             var endMessage = "You scored 100%!";
-            var bottomText = "Great job!"
+            // var bottomText = "Great job!"
         }
         else if (correctAns > incorrectAns) {
             var endMessage = "Good job!";
-            var bottomText = "Not too bad, yogi!"
+            // var bottomText = "Not too bad, yogi!"
         }
         else {
             var endMessage = "Keep practicing..";
-            var bottomText = "Yoga is a practice, take time to learn!"
+            // var bottomText = "Yoga is a practice, take time to learn!"
         }
 
         $(".game").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" +
@@ -124,7 +124,7 @@ $(document).ready(function () {
 
         $(".game").append("<h1 class='startBtn'>Start Over?</h1>");
 
-        $("#bottomText").html(bottomText);
+        // $("#bottomText").html(bottomText);
         gameReset();
         $(".startBtn").click(nextQuestion);
 

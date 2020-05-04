@@ -72,23 +72,6 @@ padding-bottom: 150px;
 
 
 
-/* .questions{
-    margin-top: 25px;
-    width: 960px;
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    line-height: 40px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.694), rgba(255, 255, 255, 0.482)), url("../images/Questions\ Background.jpg");
-    border: solid 10px;
-    border-color: rgb(145, 185, 145);
-    margin-top: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    } */
-
-
 
 #timer{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -126,9 +109,10 @@ padding-bottom: 150px;
 
 
 .correct, .incorrect, .timeUp {
-    font-size: 36px;
+    font-size: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 
 
 @media screen and (max-width: 700px){
