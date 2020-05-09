@@ -31,7 +31,7 @@ $(document).ready(function () {
         correctAnswer: "False",
         image: "<img src='assets/images/2india.jpg' class= 'image'>"
     }, {
-        question: "There are 26 postures in the Bikram Yoga series.",
+        question: "There are 26 postures in the Bikram Yoga series.' class ='test'>",
         answers: ["True", "False"],
         correctAnswer: "True",
         image: "<img src='assets/images/3bikram.jpg' class='image'>"
@@ -144,6 +144,7 @@ $(document).ready(function () {
                 time--;
             }
             $("#timer").html("<strong>" + time + "</strong>");
+
         }
     }
 
@@ -174,6 +175,7 @@ $(document).ready(function () {
     function startGame() {
         $(".game").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
         $(".startBtn").hide();
+        // $("#cover-image").hide();
         questionContent();
         timer();
         timeUp();
