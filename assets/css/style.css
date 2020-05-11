@@ -109,6 +109,16 @@ p{
     font-size: 28px;
     }
 
+p.correct, p.incorrect{
+    font-family: 'Syncopate';
+    background-color: salmon;
+    }
+
+
+.gameR{
+    border: solid 1px salmon;
+}
+
 .game{
 /* width: 960px; */
 margin-left: auto;
@@ -158,9 +168,9 @@ padding-top: 50px;
 }
 
 .image{
-    width: 400px;
-    height: 300px;
-    border: solid 5px rgb(145, 185, 145);
+    width: 783px;
+    height: 500px;
+    
 }
 
 

@@ -31,7 +31,7 @@ $(document).ready(function () {
         correctAnswer: "False",
         image: "<img src='assets/images/2india.jpg' class= 'image'>"
     }, {
-        question: "There are 26 postures in the Bikram Yoga series.' class ='test'>",
+        question: "There are 26 postures in the Bikram Yoga series.' class",
         answers: ["True", "False"],
         correctAnswer: "True",
         image: "<img src='assets/images/3bikram.jpg' class='image'>"
@@ -69,10 +69,10 @@ $(document).ready(function () {
 
     // If the user guesses correctly
     function answeredCorrectly() {
-        $(".game").html("<p class='correct'>Correct!!</p>");
+        $(".gameR").html("<p class='correct'>Correct!!</p>");
         correctAns++;
         var correctAnswer = questions[counter].correctAnswer;
-        $(".game").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
+        $(".gameR").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
             questions[counter].image);
         setTimeout(nextQuestion, 3000);
         counter++;
@@ -80,10 +80,10 @@ $(document).ready(function () {
 
     // If the user guesses incorrectly
     function answeredIncorrectly() {
-        $(".game").html("<p class='incorrect'>Incorrect.</p>");
+        $(".gameR").html("<p class='incorrect'>Incorrect.</p>");
         incorrectAns++;
         var correctAnswer = questions[counter].correctAnswer;
-        $(".game").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
+        $(".gameR").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
             questions[counter].image);
         setTimeout(nextQuestion, 3000);
         counter++;
@@ -92,10 +92,10 @@ $(document).ready(function () {
     // If the timer runs out...
     function timeUp() {
         if (time === 0) {
-            $(".game").html("<p class='timeUp'>Time's Up!</p>");
+            $(".gameR").html("<p class='timeUp'>Time's Up!</p>");
             incorrectAns++;
             var correctAnswer = questions[counter].correctAnswer;
-            $(".game").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
+            $(".gameR").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
                 questions[counter].image);
             setTimeout(nextQuestion, 3000);
             counter++;
