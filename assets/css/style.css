@@ -75,8 +75,10 @@ h3{
 
 /* game intro bar  */
 #cover-image{
-    width: 783px;
-    height: 500px;
+    /* max-width: 783px;
+    max-height: 500px; */
+    width: 100%;
+    height: auto;
  }
 
  button{
@@ -85,20 +87,20 @@ h3{
  .startBtn{
     color:white;
     background-color:rgb(145, 185, 145);
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-width: 350px;
+    margin-left: 0;
+    margin-right: 0;
    border-color: white;
    text-align: center;
    font-family: 'Syncopate';
+  
 
 }
 
 .start{
     
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
   
 }
 
@@ -106,35 +108,44 @@ h3{
 
 /* question and timer font  */
 p{
-    font-size: 28px;
-    }
-
-p.correct, p.incorrect{
+    font-size: 25px;
     font-family: 'Syncopate';
-    background-color: salmon;
     }
 
+p.correct, p.incorrect, p.answer{
+    font-family: 'Syncopate';
+    /* background-color: salmxon; */
+    }
+.gameBox{
+    width: 100%;
+
+}
 
 .gameR{
-    border: solid 1px salmon;
+    /* border: solid 1px salmon; */
+    padding-top: 10px;
+    max-width: 800px;
 }
 
 .game{
 /* width: 960px; */
-margin-left: auto;
-margin-right: auto;
+padding-left: 50px;
+margin-left: 0;
+margin-right: 0;
+display: flex;
+flex-direction: column;
 
 font-family: 'Syncopate';
-text-align: center;
+text-align: left;
 margin-bottom: 150px;
 width: 60%;
 height:80%;
-padding-top: 50px;
+padding-top: 10px;
 }
 
 
 #timer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Syncopate';
     font-weight: 400px;
     color: white;
     background-color: rgb(145, 185, 145);
@@ -143,10 +154,15 @@ padding-top: 50px;
 }
 .strong {
     background-color: tomato;
+    font-weight: bold;
+    
 }
 
 .answer{
-    background-color: teal;
+    background-color: rgb(145, 185, 145);
+    font-family: 'Syncopate';
+    text-align: left;
+   
 }
 
 .answers:hover {
@@ -161,53 +177,81 @@ padding-top: 50px;
     border-radius: 5px;
     width: 200px;
     margin: 15px 25%;
-    float: none;
+    
     margin-right: auto;
-    margin-left: auto; 
+    margin-left: 0; 
     font-size: 15px;
+
 }
 
 .image{
-    width: 783px;
-    height: 500px;
+    max-width: 783px;
+    max-height: 500px;
     
 }
 
 
 .correct, .incorrect, .timeUp {
     font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Syncopate';
 }
 
 
 
 @media screen and (max-width: 500px){
+    p{
+    margin: auto;
+    text-align: center;
+    }
+
+    h4{
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    
+    h3{
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    
     .start{
         margin: auto;        
     } 
+    
     .startBtn{
-        margin: auto;
+      margin: 0;
+      
     } 
-
-    .game{
-        margin: auto;  
-        
-    } 
-
-    .hero-image{
-        margin: auto;
+    
+    .gameBox{
+    width: 100%;
+    padding-bottom: 100px;
     }
 
+    .game{ 
+        width: 100%;  
+        padding-left: 0;  
+    } 
+
+    .gameR{
+      width: 100%;
+    }
+
+    #cover-image{
+    width: 100%;
+    }
+
+    .image{
+    width: 100%
+    }
+ 
     .hero-text{
-        margin: auto;
+    margin: auto;
     }
 
-
-.answers {
+    .answers {
     margin: auto;
-    width: 400px;
-height: 200px;
- } 
-
-
+    } 
 }

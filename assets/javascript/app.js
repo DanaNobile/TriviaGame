@@ -114,15 +114,15 @@ $(document).ready(function () {
 
         }
         else {
-            var endMessage = "Keep practicing..";
+            var endMessage = "Keep practicing.";
 
         }
 
-        $(".game").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" +
+        $(".gameB").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" +
             correctAns + "</strong> right.</p>" + "<p>You got <strong>" +
             incorrectAns + "</strong> wrong.</p>");
 
-        $(".game").append("<h1 class='startBtn'>Start Over?</h1>");
+        $(".gameB").append("<h1 class='startBtn'>Start Over?</h1>");
 
 
         gameReset();
@@ -169,12 +169,15 @@ $(document).ready(function () {
         counter = 0;
         correctAns = 0;
         incorrectAns = 0;
+        $(".gameR").hide();
+        $(".game").hide();
     }
 
 
     function startGame() {
         $(".game").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
         $(".startBtn").hide();
+
         // $("#cover-image").hide();
         questionContent();
         timer();
@@ -186,6 +189,7 @@ $(document).ready(function () {
 
 
     $(".game").on("click", ".answers", (function () {
+
         var userGuess = $(this).text();
         if (userGuess === questions[counter].correctAnswer) {
             clearInterval(clock);
