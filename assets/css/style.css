@@ -1,27 +1,14 @@
 
 body, html {
-    
-  
-        /* background: linear-gradient(rgba(255, 255, 255, 0.372), rgba(255, 255, 255, 0.447)), url("../images/Questions\ Background.jpg") no-repeat center center fixed;  
-    -webkit-background-size: cover; 
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;   */
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
-        overflow-x: hidden; 
-        background-color: #f1edea;
-    }
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    background-color: #f1edea;
+}
 
 
-
-
-
-
-
- 
  /* Header  */
 
 .hero-image {
@@ -33,7 +20,7 @@ body, html {
     position: relative;
   }
   
-  .hero-text {
+.hero-text {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -41,111 +28,113 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'Syncopate';
-  }
+}
 
-  h1{
+h1{
       font-size: 50px;
-  }
+}
 
   /* Top Bar  */
 
-.top-bar{
+.top-bar {
     min-height: 100px;
     background-color: white;
 }
 
-h3{
-    font-family: 'Syncopate';
-     color: rgb(77, 76, 76);  
-     letter-spacing: 15%;
-     font-size: 40px;
-     padding-left: 50px;
-     padding-top: 35px;
-     padding-bottom: 25px;
- }
- 
- h4{
+h3 {
     font-family: 'Syncopate';
     color: rgb(77, 76, 76);  
-     font-size: 18px;
-     padding-top: 45px;
-     padding-bottom: 25px;
- }
+    letter-spacing: 15%;
+    font-size: 40px;
+    padding-left: 50px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+ 
+h4 {
+    font-family: 'Syncopate';
+    color: rgb(77, 76, 76);  
+    font-size: 18px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+}
 
 
-/* game intro bar  */
-#cover-image{
-    /* max-width: 783px;
-    max-height: 500px; */
+/* Game intro bar  */
+#cover-image {
     width: 100%;
     height: auto;
- }
+}
 
- button{
+button {
     margin-top: 200px;
 }
- .startBtn{
+
+.startBtn {
     color:white;
     background-color:rgb(145, 185, 145);
-    min-width: 350px;
+    max-width: 350px;
     margin-left: 0;
     margin-right: 0;
-   border-color: white;
-   text-align: center;
-   font-family: 'Syncopate';
-  
+    border-color: white;
+    text-align: center;
+    font-family: 'Syncopate';
+    font-size: 20px;
 
 }
 
-.start{
-    
+.start {
     margin-right: 0;
-    margin-left: 0;
-  
+    margin-left: 0; 
 }
 
 /* Game  */
 
-/* question and timer font  */
-p{
+/* Question and Timer Font  */
+p {
     font-size: 25px;
     font-family: 'Syncopate';
     text-align: center;
-    }
-
-p.correct, p.incorrect, p.answer{
-    font-family: 'Syncopate';
-    /* background-color: salmxon; */
-    }
-.gameBox{
-    width: 100%;
-
 }
 
-.gameR{
-    /* border: solid 1px salmon; */
+p.correct, p.incorrect, p.answer {
+    font-family: 'Syncopate';
+    background-color: white;
+}
+
+.gameBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;    
+}
+
+.gameR {
     padding-top: 10px;
     max-width: 800px;
+    text-align: center;
+    
 }
 
-.game{
-/* width: 960px; */
-padding-left: 50px;
-margin-left: 0;
-margin-right: 0;
-display: flex;
-flex-direction: column;
-
-font-family: 'Syncopate';
-text-align: left;
-/* margin-bottom: 150px; */
-width: 60%;
-height:80%;
-padding-top: 10px;
+.gameR img{
+    /* max-height: 200px; */
+}
+.game {
+    padding-left: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Syncopate';
+    text-align: left;
+    width: 60%;
+    height:80%;
+    padding-top: 10px;
+    justify-content: center;
 }
 
 
-#timer{
+#timer {
     font-family: 'Syncopate';
     font-weight: 400px;
     color: white;
@@ -153,17 +142,20 @@ padding-top: 10px;
     text-align: center;
     font-weight: bold;
 }
+
+.timer-text{
+    background-color: rgb(145, 185, 145);
+}
+
 .strong {
-    background-color: tomato;
     font-weight: bold;
     
 }
 
-.answer{
+.answer {
     background-color: rgb(145, 185, 145);
     font-family: 'Syncopate';
-    text-align: left;
-   
+    text-align: left; 
 }
 
 .answers:hover {
@@ -187,8 +179,7 @@ padding-top: 10px;
 
 .image{
     max-width: 783px;
-    max-height: 500px;
-    
+    max-height: 500px;  
 }
 
 
@@ -200,63 +191,62 @@ padding-top: 10px;
 
 
 @media screen and (max-width: 500px){
-    p{
+p {
     margin: auto;
     text-align: center;
     font-size: 15px;
-    }
+}
 
-    h4{
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center;
-    }
+h4 {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
     
-    h3{
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center;
-    }
+h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
     
-    .start{
-        margin: auto;        
-    } 
+.start {
+    margin: auto;        
+} 
+
+.startBtn {
+    margin: 0;    
+} 
     
-    .startBtn{
-      margin: 0;
-      
-    } 
-    
-    .gameBox{
+.gameBox {
     width: 100%;
     padding-bottom: 100px;
-    }
+    margin-top: 20px;
+}
 
-    .game{ 
-        width: 100%;  
-        padding-left: 0;  
-        margin-bottom: 15px;
-    } 
+.game { 
+    width: 100%;  
+    padding-left: 0;  
+    margin-bottom: 15px;
+} 
 
-    .gameR{
+.gameR {
       width: 100%;
-    }
+}
 
-   
-
-    #cover-image{
+#cover-image {
     width: 100%;
-    }
+}
 
-    .image{
+.image {
     width: 100%
-    }
+}
  
-    .hero-text{
+.hero-text{
     margin: auto;
-    }
+}
 
-    .answers {
+.answers {
     margin: auto;
-    } 
+} 
+
 }

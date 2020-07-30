@@ -1,8 +1,4 @@
 
-
-
-
-
 $(document).ready(function () {
 
     // GLOBAL VARIABLES
@@ -11,7 +7,7 @@ $(document).ready(function () {
     var counter = 0;
 
     // Timer Start Number
-    var countStartNumber = 15;
+    var countStartNumber = 10;
 
     // Count correct guesses
     var correctAns = 0;
@@ -74,7 +70,7 @@ $(document).ready(function () {
         var correctAnswer = questions[counter].correctAnswer;
         $(".gameR").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
             questions[counter].image);
-        setTimeout(nextQuestion, 3000);
+        setTimeout(nextQuestion, 1000);
         counter++;
     }
 
@@ -85,7 +81,7 @@ $(document).ready(function () {
         var correctAnswer = questions[counter].correctAnswer;
         $(".gameR").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
             questions[counter].image);
-        setTimeout(nextQuestion, 3000);
+        setTimeout(nextQuestion, 1000);
         counter++;
     }
 
@@ -97,40 +93,32 @@ $(document).ready(function () {
             var correctAnswer = questions[counter].correctAnswer;
             $(".gameR").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" +
                 questions[counter].image);
-            setTimeout(nextQuestion, 3000);
+            setTimeout(nextQuestion, 1000);
             counter++;
         }
     }
-
 
     // RESULTS SCREEN
     function results() {
         if (correctAns === questions.length) {
             var endMessage = "You scored 100%!";
-
         }
         else if (correctAns > incorrectAns) {
             var endMessage = "Good job!";
-
         }
         else {
             var endMessage = "Keep practicing.";
-
         }
 
         $(".gameB").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" +
             correctAns + "</strong> right.</p>" + "<p>You got <strong>" +
             incorrectAns + "</strong> wrong.</p>");
 
-        $(".gameB").append("<h1 class='startBtn'>Start Over?</h1>");
+        $(".gameB").append("<h1 class='startBtn'Start Over?</h1>");
 
-
-        gameReset();
+        gameReset($(".startBtn").click(nextQuestion));
         $(".startBtn").click(nextQuestion);
-
     }
-
-
 
     // Sets game timer to 15 seconds
     function timer() {
@@ -144,16 +132,13 @@ $(document).ready(function () {
                 time--;
             }
             $("#timer").html("<strong>" + time + "</strong>");
-
         }
     }
 
-
-
     function nextQuestion() {
         if (counter < questions.length) {
-            time = 15;
-            $(".game").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
+            time = 10;
+            $(".game").html("<p class ='timer-text'>You have <span id='timer'>" + time + "</span> seconds left!</p>");
             questionContent();
             timer();
             timeUp();
@@ -164,7 +149,6 @@ $(document).ready(function () {
     }
 
     // Reset score upon game restart
-
     function gameReset() {
         counter = 0;
         correctAns = 0;
@@ -173,19 +157,15 @@ $(document).ready(function () {
         $(".game").hide();
     }
 
-
     function startGame() {
         $(".game").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
         $(".startBtn").hide();
-
-        // $("#cover-image").hide();
         questionContent();
         timer();
         timeUp();
     }
 
     $(".startBtn").click(nextQuestion);
-
 
 
     $(".game").on("click", ".answers", (function () {
@@ -201,3 +181,4 @@ $(document).ready(function () {
         }
     }))
 });
+
